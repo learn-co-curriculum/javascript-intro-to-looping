@@ -1,4 +1,5 @@
 /*global describe, it*/
+"use strict"
 
 const chai = require('chai')
 const fs = require('fs')
@@ -28,7 +29,8 @@ describe('loops', () => {
 
   describe('forLoop(array)', () => {
     it('adds `"I am ${i} strange loop${i === 0 ? \'\' : \'s\'}."` to an array 25 times', () => {
-      const [array, t] = makeArray()
+      const array = makeArray()
+      const t = makeArray()
       const strangeArray = forLoop(array)
 
       expect(strangeArray.length).to.equal(t + 25)
@@ -56,7 +58,8 @@ describe('loops', () => {
 
   describe('doWhile(array)', () => {
     it('removes elements from `array` until `array` is empty or until `maybeTrue()` returns `false`', () => {
-      const [array, t] = makeArray()
+      const array = makeArray()
+      const t = makeArray()
       const l = array.length
 
       const newArray = doWhileLoop(array)
