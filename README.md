@@ -5,7 +5,6 @@
 - Build a while loop
 - Build a do-while loop
 - Build a for-of loop
-- Build a for-in loop
 - Explain the purpose of a loop
 - Explain the difference between each type of loop in JS
 
