@@ -62,19 +62,20 @@ describe('loops', () => {
 
       expect(newArray).to.have.length.of.at.most(l - 1)
     })
-
-    describe('forOf(array)', () => {
-      it('adds `"I am ${i} strange loop${i === 0 ? \'\' : \'s\'}."` to an array 25 times', () => {
-        const [array, t] = makeArray()
-        const strangeArray = forLoop(array)
-        const testArray = strangeArray.slice(array.length)
+    
+    describe('forOfLoop(array)', () => {
+      it('expects Hello world to be printed the same number of times as items in the array', () => {
+        const array = ["first","second","third", "fourth", "fifth"]
+        const newArray = forLoop(array)
   
-        let first = "I am 1 strange loop."
-        let rest = "I am 24 strange loops."
-          
-        expect(strangeArray[11]).to.equal(first)
-        expect(strangeArray[34]).to.equal(rest)
-        expect(strangeArray.length).to.equal(t + 25)
+        expect(newArray.length).to.equal(30)
+  
+        const testArray = newArray.slice(array.length)
+  
+        for (let i = 0, l = testArray.length; i < l; i++) {
+          let s = `Hello World the ${i} time`
+          expect(testArray[i]).to.equal(s)
+        }
       })
     })
   })

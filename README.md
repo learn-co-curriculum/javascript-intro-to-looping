@@ -96,22 +96,6 @@ for (var i = 1; i < 100; i++) {
 // Hello World the 3 time
 
 ```
-
-The code below will print the string "Hello World!" 3 times
-
-```javascript
-var array = ["first","second","third"]
-
-for (var i = 0; i < array.length; i++) {
-  console.log( "Hello World the " + array[i] + " time" );
-}
-
-// The above prints:
-// Hello World the first time
-// Hello World the second time
-// Hello World the third time
-```
-
 You'll encounter `for` loops again when you learn about iterating through object literals.
 
 **TODO**: Build a function `forLoop`. It takes an array as an argument. Start counting from 0, and,
@@ -220,33 +204,12 @@ It's much cleaner than the `for` loop:
 * No incrementing the counter
 * No bracket notation to access elements in the array (`myArray[i]`).
 
-#### Example
+**TODO**: Build a function `forOfLoop`. Just like the `for` loop, it takes an array as an argument. 
+The function will return "Hello World `Hello World the (n) time` for each string in the array.
 
-Using the sample example as the `for` loop using `array.length`, we can see 
-the code below will print the string "Hello World!" 3 times.
-
-```javascript
-var array = ["first","second","third"]
-
-for (const count of array) {
-  console.log("Hello World the " + count + " time");
-}
-
-// The above prints:
-// Hello World the first time
-// Hello World the second time
-// Hello World the third time
-```
-
-**TODO**: Build a function `forOf`. Just like the `for` loop, it takes an array as an argument. 
-Start counting from 0, and, using a `for...of` loop, add a string to the array 25 times.
-If your `i` value is `1`, add the string `"I am 1 strange loop."`; if your `i` value is anything
-else, add the string `"I am ${i} strange loops."` using conditional statements.
-
-**NOTE**: Your `forOf` loop could look something like this:
+**HINT**: Your `forOf` loop looks like this:
 
 ``` javascript
-var i = 0 
 for (const item of array) {
   //...
 }
