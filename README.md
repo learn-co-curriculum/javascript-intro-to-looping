@@ -208,6 +208,50 @@ Remember how we couldn't be sure with the plain `while` loop above that the body
 
 **TODO**: Define a function called `doWhileLoop` in `loops.js`. The function should take an array as an argument. Use the `incrementVariable()` function (you can copy it from this README) as the condition, and remove elements from the array until the array is empty or until `incrementVariable()` returns `false`. (Your condition might look something like `array.length > 0 && incrementVariable()`.) Finally, return the array.
 
+## The `for...of` Loop
+
+ES2015 introduced the `for...of` statement. Its one and only function is to iterate members of `Array`s.
+
+It's much cleaner than the `for` loop:
+
+* No three-part declaration divided by `;` to memorize
+* No initialization of a counter
+* No condition
+* No incrementing the counter
+* No bracket notation to access elements in the array (`myArray[i]`).
+
+#### Example
+
+Using the sample example as the `for` loop using `array.length`, we can see 
+the code below will print the string "Hello World!" 3 times.
+
+```javascript
+var array = ["first","second","third"]
+
+for (const count of array) {
+  console.log("Hello World the " + count + " time");
+}
+
+// The above prints:
+// Hello World the first time
+// Hello World the second time
+// Hello World the third time
+```
+
+**TODO**: Build a function `forOf`. Just like the `for` loop, it takes an array as an argument. 
+Start counting from 0, and, using a `for...of` loop, add a string to the array 25 times.
+If your `i` value is `1`, add the string `"I am 1 strange loop."`; if your `i` value is anything
+else, add the string `"I am ${i} strange loops."` using conditional statements.
+
+**NOTE**: Your `forOf` loop could look something like this:
+
+``` javascript
+var i = 0 
+for (const item of array) {
+  //...
+}
+```
+
 ## Conclusion
 
 If seeing all of these new loops all at once is freaking you out, take a deep breath. Remember, 98% of the time you will want to use a `for` loop. A general heuristic for choosing which loop, is try a `for`. If using `for` doesn't serve your purposes, then go ahead and try a different loop. Also remember that you can always refer to documentation on these loops at any time. After some time coding in JavaScript, writing a `for` loop will come as naturally to you as wrapping one gift after another.
