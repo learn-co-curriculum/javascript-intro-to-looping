@@ -34,3 +34,9 @@ function doWhileLoop(array) {
 
   return array
 }
+
+function forOfLoop(array) {
+  for (const item of array) {
+    array.push("Hello World the " + item + " time")
+  }
+}

@@ -63,4 +63,20 @@ describe('loops', () => {
       expect(newArray).to.have.length.of.at.most(l - 1)
     })
   })
+
+  describe('forOfLoop(array)', () => {
+    it('expects Hello world to be printed the same number of times as items in the array', () => {
+      const array = ["first","second","third", "fourth", "fifth"]
+      const newArray = forLoop(array)
+
+      expect(newArray.length).to.equal(30)
+
+      const testArray = newArray.slice(array.length)
+
+      for (let i = 0, l = testArray.length; i < l; i++) {
+        let s = `Hello World the ${i} time`
+        expect(testArray[i]).to.equal(s)
+      }
+    })
+  })
 })
