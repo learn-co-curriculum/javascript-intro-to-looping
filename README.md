@@ -35,7 +35,7 @@ This logs:
 5
 ```
 
-This works, but it is very repetative. Its also 'hardcoded' - that is to say, it
+This works, but it is very repetitive. Its also 'hardcoded' - that is to say, it
 will only work if we want to log the numbers `1` through `5`. We could instead
 make this code a bit more abstract and replace the numbers with a variable,
 incrementing the variable after each log:
