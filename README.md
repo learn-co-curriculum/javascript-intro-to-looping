@@ -65,7 +65,7 @@ beginning, we would get:
 9
 ```
 
-Cool, but we still have an issue - this code is way to repetitive. In fact,
+Cool, but we still have an issue - this code is way too repetitive. In fact,
 abstracting the code made it _even more_ repetitive!  
 
 Instead of having to write the same lines over and over, we can use a _loop_.
